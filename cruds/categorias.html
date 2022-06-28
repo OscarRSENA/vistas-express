@@ -15,9 +15,7 @@
             const data = await response.json();
             console.log(data);
             const table = document.getElementById("productos");
-            data.forEach(element =>{
 
-           
             data.forEach((e,i) => {    //< ---  recorremos data
 
                 let tr = document.createElement("tr"); //< ---  creamos una fila
@@ -41,16 +39,11 @@
                 let td1 = document.createElement("td")
                 var form = document.createElement("form");
                 form.setAttribute("method", "get");
-                let input = document.createElement("input")
-                form.setAttribute("action", "http://localhost:3000/api/v1/categories/")
-                input.type = "hidden"
-                input.value = element.id 
-                input.name = "id"
+                form.setAttribute("action", `http://localhost:3000/api/v1/categories/${e.id}`)
                 let button = document.createElement("button")
                 button.type = "submit"
                 button.innerHTML = "Ver categoria"
 
-                form.appendChild(input);
                 form.appendChild(button)
     
                 td1.appendChild(form)
@@ -61,7 +54,6 @@
                 table.appendChild(tr); //< --- Agregamos la fila a la tabla
 
             });
-        })
         })();
     </script>
 
