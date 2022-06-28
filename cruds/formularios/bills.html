@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Factura</title>
+
+    <link href="./Styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" media="(max-width: 800px)" href="./Styles/main.css" />
+</head>
+
+<body>
+    <div class="cadastro">
+        <form class="cadastroForm">
+            <div class="textoscadastro">
+                <h1 class="titulocadastro">Factura</h1>
+                
+
+            <form  enctype="multipart/form-data" action="http://localhost:3000/api/v1/bills/" class="formulario"  method="post" >
+
+            <div class="inputLogin">
+                <h3 class="tituloNome">Empresa</h3>
+                <input class="company" style="width: 300px;" type="text">
+
+                <h3 class="tituloNome">Nombre</h3>
+                <input class="name" style="width: 300px;" type="text">
+
+                <h3 class="tituloEmail">Fecha</h3>
+                <input class="date" style="width: 300px;" type="email">
+
+                <h3 class="titulocontraseña">Categorias</h3>
+                <input class="categories" style="width: 300px;" type="password">
+
+                <h3 class="titulotelefono">Precio</h3>
+                <input class="price" style="width: 300px;" type="text">
+            </div>
+
+           
+            <div class="buttonEntrar">
+
+                <h3 class="titulotelefono">Descripcion</h3>
+                <input class="description" style="width: 300px;" type="text">
+                <div class="buttonEntrar">
+
+
+                <a class="entrar" href="#" style="cursor: pointer;">Guardar</a>
+            </div>
+        </form>
+      
+    </div>
+</body>
+
+</html>
