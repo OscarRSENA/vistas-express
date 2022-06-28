@@ -37,19 +37,58 @@
 
                 }
 
-                let td1 = document.createElement("td")
+                 //ver fila en api
+
+                 let td1 = document.createElement("td")
                 var form = document.createElement("form");
                 form.setAttribute("method", "get");
                 form.setAttribute("action", `http://localhost:3000/api/v1/suppliers/${e.id}`)
+                
                 let button = document.createElement("button")
                 button.type = "submit"
-                button.innerHTML = "Ver proveedor"
+                button.className = "btn btn-primary"
+                button.innerHTML = "Ver proveedores"
 
                 form.appendChild(button)
     
                 td1.appendChild(form)
 
                 tr.appendChild(td1)
+
+                //actualizar fila 
+
+                let td2 = document.createElement("td")
+                var formact = document.createElement("form");
+                formact.setAttribute("method", "delete");
+                formact.setAttribute("action", `http://localhost:3000/api/v1/suppliers/${e.id}`)
+                let buttonact = document.createElement("button")
+                buttonact.type = "submit"
+                buttonact.className = "btn btn-info"
+                buttonact.innerHTML = "Actualizar"
+
+                formact.appendChild(buttonact)
+    
+                td2.appendChild(formact)
+
+                tr.appendChild(td2)
+
+
+                //eliminar fila
+
+                let td3 = document.createElement("td")
+                var formdel = document.createElement("form");
+                formdel.setAttribute("method", "delete");
+                formdel.setAttribute("action", `http://localhost:3000/api/v1/suppliers/${e.id}`)
+                let buttondel = document.createElement("button")
+                buttondel.type = "submit"
+                buttondel.className = "btn btn-danger"
+                buttondel.innerHTML = "Eliminar"
+
+                formdel.appendChild(buttondel)
+    
+                td3.appendChild(formdel)
+
+                tr.appendChild(td3)
 
                 
                 table.appendChild(tr); //< --- Agregamos la fila a la tabla
@@ -70,6 +109,10 @@
             <td scope="col">nit</td>
             <td scope="col">isblock</td>
             <td scope="col"> ver </td>
+            <td scope="col"> actualizar</td>
+            <td scope="col"> eliminar</td>
+            <td scope="col"> <button type="button" class="btn btn-success">Nuevo</button></td>
+            
         </tr>
 
     </div>
