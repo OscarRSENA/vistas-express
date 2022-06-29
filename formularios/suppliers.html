@@ -14,12 +14,9 @@
 
 <body>
     <div class="cadastro">
-        <form class="cadastroForm">
+        <form class="cadastroForm" action="https://shrouded-brushlands-49939.herokuapp.com/api/v1/suppliers/"  method="post" >
             <div class="textoscadastro">
                 <h1 class="titulocadastro">Proveedores</h1>
-             
-
-            <form  enctype="multipart/form-data" action="http://localhost:3000/api/v1/suppliers/" class="formulario"  method="post" >
 
             <div class="inputLogin">
                 <h3 class="tituloNome">Nombre</h3>
@@ -41,7 +38,7 @@
             
             <div class="buttonEntrar">
 
-                <a class="entrar" href="#" style="cursor: pointer;">Guardar</a>
+                <button class="btn btn-primary" type="submit"> Guardar</button>
             </div>
         </form>
       

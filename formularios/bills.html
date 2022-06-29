@@ -14,12 +14,10 @@
 
 <body>
     <div class="cadastro">
-        <form class="cadastroForm">
+        <form class="cadastroForm" action="https://shrouded-brushlands-49939.herokuapp.com/api/v1/bills/"  method="POST">
             <div class="textoscadastro">
                 <h1 class="titulocadastro">Factura</h1>
-                
 
-            <form  enctype="multipart/form-data" action="http://localhost:3000/api/v1/bills/" class="formulario"  method="post" >
 
             <div class="inputLogin">
                 <h3 class="tituloNome">Empresa</h3>
@@ -29,26 +27,21 @@
                 <input class="name" style="width: 300px;" type="text">
 
                 <h3 class="tituloEmail">Fecha</h3>
-                <input class="date" style="width: 300px;" type="email">
+                <input class="date" style="width: 300px;" type="date">
 
                 <h3 class="titulocontraseña">Categorias</h3>
-                <input class="categories" style="width: 300px;" type="password">
+                <input class="categories" style="width: 300px;" type="text">
 
                 <h3 class="titulotelefono">Precio</h3>
                 <input class="price" style="width: 300px;" type="text">
-            </div>
-
-           
-            <div class="buttonEntrar">
 
                 <h3 class="titulotelefono">Descripcion</h3>
                 <input class="description" style="width: 300px;" type="text">
-                <div class="buttonEntrar">
-
-
-                <a class="entrar" href="#" style="cursor: pointer;">Guardar</a>
             </div>
+            <button class="btn btn-primary" type="submit"> Guardar</button>
+
         </form>
+        
       
     </div>
 </body>

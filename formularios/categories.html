@@ -1,57 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
-    <link rel="stylesheet media="(max-width: 800px) href="Styles/categories.css">
-</head>
-    
 
+    <title>Categorias</title>
+
+    <link href="./Styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" media="(max-width: 800px)" href="./Styles/main.css" />
+</head>
 
 <body>
-    <form  enctype="multipart/form-data" action="http://localhost:3000/api/v1/categories/" class="formulario"  method="post" >
-     
+    <div class="cadastro">
+        <form class="cadastroForm" action="https://shrouded-brushlands-49939.herokuapp.com/api/v1/categories/" method="post" >
+            <div class="textoscadastro">
+                <h1 class="titulocadastro">Categorias</h1>
+               
+            <form  enctype="multipart/form-data" >
 
+            <div class="inputLogin">
+                <h3 class="tituloNome">categoria</h3>
+                <input class="name" style="width: 300px;" type="text">
 
-    
-    <div class="casilla">
-    <label class="label" for="">codigo de libro</label>
-    <input class="espacio" type="text" name="id" required>
+                <h3 class="tituloNome">descripcion</h3>
+                <input class="amount" style="width: 300px;" type="text">
+
+        
+
+              
+            </div>
+            <br>
+
+            <button class="btn btn-primary" type="submit"> Guardar</button>
+            </div>
+        </form>
+      
     </div>
-    
-    
-    
-
-    
-    </select>
-    </div>
-    
-    
-    
-    <div class="casilla">
-    <label class="label" for="">Categoria
-    <input class="espacio" type="text" name="category"required>
-    </div>
-    
-    <div class="casilla">
-    <label class="label" for="">Descripcion
-    <input class="espacio" type="text" name="description"required>
-    </div>
-    
-   
-<button type="submit">Guardar</button> </button>
-
-</div>
-
-
-
-
-</form>
-
 </body>
+
 </html>
-
-
-
